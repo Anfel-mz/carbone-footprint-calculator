@@ -2,7 +2,7 @@ package consoCarbone;
 
 public class BienConso extends ConsoCarbone{
 private double montant; //dépenses annuelles de l'utilisateur
-private double impact; //tonne de CO2
+
 
 //constantes
 private final static double DEPENSESTONNECO2= 1750;
@@ -10,11 +10,11 @@ private final static double DEPENSESTONNECO2= 1750;
 public BienConso(double montant) {
 	super();
 	this.montant = montant; 
-	this.impact = this.getimpact();
-	this.empcarbonne(); //afficher le message à la console
+	this.impact = this.setImpact();
 }
 
-private double getimpact() {
+@Override
+protected double setImpact() {
 	return this.montant/DEPENSESTONNECO2;
 }
 
@@ -31,19 +31,10 @@ public void setMontant(double montant) {
 	this.montant = montant;
 }
 
-public double getImpact() {
-	return impact;
-}
 
-public void setImpact(double impact) {
-	this.impact = impact;
-}
-
-
-
-//toString
+@Override
 public String toString() {
-	   String s = "Montant des dépeses annuelles: "+this.getMontant()+"\n"+"impact: "+this.getimpact()+" TCO2"+"\n"+"--------------------------";
+	   String s = "Montant des dépeses annuelles: "+this.getMontant()+"\n"+"impact: "+this.getImpact()+" TCO2"+"\n"+"--------------------------";
 	   return s;
 }
 

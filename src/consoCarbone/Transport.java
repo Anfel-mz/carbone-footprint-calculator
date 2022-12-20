@@ -6,7 +6,7 @@ public class Transport extends ConsoCarbone {
     private Taille taille;
     private int kilomAnnee; //nbr de KM parcourus /an
     private int amortissement; //durée de conservation du véhicule
-    private double impact = 0 ; 
+   
     
     //constantes
     private static final double CIMPACT = 1.93* Math.pow(10, (-4));
@@ -17,17 +17,14 @@ public class Transport extends ConsoCarbone {
     	this.kilomAnnee = kilomAnnee;
     	this.amortissement = amortissement;
     	this.possede = true;
-    	this.impact = this.getimpact();
-    	this.empcarbonne();//afficher le message à la console 
+    	this.impact = this.setImpact();
+    	
     }
     
-    private double getimpact() {
-    	if(this.possede) {
-    	return (this.kilomAnnee*CIMPACT)+(this.taille.getFabrication()/this.amortissement);
-    	} else {
-    		return 0;
-    	}
-    	
+    @Override
+protected double setImpact() {
+    	double rslt = (this.possede)?(this.kilomAnnee*CIMPACT)+(this.taille.getFabrication()/this.amortissement):0;
+    	return rslt;
     }
     
     static public void empcarbonne(){
@@ -84,7 +81,7 @@ public class Transport extends ConsoCarbone {
 		this.impact = impact;
 	}
 	
-	////////////////////////////////////toString//////////////////////////////////////////////////////////
+	@Override
 	   public String toString() {
 		   String s = "taille de véhicule: "+this.getT()+"\n"+"nombre de kilomètres parcourus par an: "+this.getKilomAnnee()+"\n"+"Durée de conservation du véhicule: "+this.getAmortissement()+"\n"+"impacte: "+ this.getImpact()+" TCO2"+"\n"+"--------------------------";
 		   if (possede) {
