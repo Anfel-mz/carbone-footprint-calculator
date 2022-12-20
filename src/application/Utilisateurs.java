@@ -4,7 +4,7 @@ import consoCarbone.*;
 /** A Utilisateurs object represents the user of the calculator
  * 
  * @author anfel MAZOUZ
- *
+ * @version 1.0
  */
 
 public class Utilisateurs {
@@ -16,7 +16,7 @@ private Transport transport;
 private ServicesPublics services;
 
 /**
- * CalculatXXXXXe the Carbon footprint of a user
+ * Calculate the Carbon footprint of a user
  * @return the value of the impact a user has in TCO2eq
  */
 

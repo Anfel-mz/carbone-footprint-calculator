@@ -2,7 +2,7 @@ package consoCarbone;
 /**
  * A Taill Object represents the size of a car
  * @author manfe
- *
+ *@version 1.0
  */
 public enum Taille {
 /**

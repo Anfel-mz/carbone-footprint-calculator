@@ -6,6 +6,10 @@ package consoCarbone;
  */
 public class Main {
 
+	/**
+	 * the main testing method 
+	 * @param args the arguments given to the main method
+	 */
 	public static void main(String[] args) {
 		
 		ConsoCarbone l = new Logement(23, CE.B);

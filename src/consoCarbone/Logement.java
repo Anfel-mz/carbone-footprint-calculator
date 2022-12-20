@@ -3,7 +3,7 @@ package consoCarbone;
 /**
  * A Logement object is a ConsoCarbone representing the carbon footprint of accommodations
  * @author anfel MAZOUZ 
- *
+ * @version 1.0
  */
 
 public class Logement extends ConsoCarbone{

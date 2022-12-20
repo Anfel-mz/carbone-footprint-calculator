@@ -1,8 +1,9 @@
 package consoCarbone;
 
 /**
- * A BienConso object is a ConsoCarbone reprents the carbon footprint of spendings
+ * A BienConso object is a ConsoCarbone represents the carbon footprint of spending
  * @author anfel MAZOUZ
+ * @version 1.0
  *
  */
 

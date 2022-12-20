@@ -2,7 +2,7 @@ package consoCarbone;
 /**
  * A ServicePublics Object is a ConsoCarbone that represents the carbon footprint of the use of public services
  * @author anfel MAZOUZ 
- *
+ *@version 1.0
  */
 
 public class ServicesPublics extends ConsoCarbone{

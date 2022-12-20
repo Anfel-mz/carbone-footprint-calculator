@@ -3,7 +3,7 @@ package consoCarbone;
 /**A Alimentation object is a ConsoCarbone representing the carbon footprint of food consumption
  * 
  * @author anfel MAZOUZ 
- *
+ * @version 1.0
  */
 
 public class Alimentation extends ConsoCarbone {

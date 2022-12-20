@@ -3,13 +3,16 @@ package consoCarbone;
 /**
  * A cosoCarbone object is the carbon footprint of a specified child object
  * @author Anfel MAZOUZ
- *
+ *@version 1.0
  */
 
 public abstract class ConsoCarbone implements Comparable <ConsoCarbone>{
 	//generating unique ids for every instance 
 private static int idcount = 0;
 private int id = ++idcount;
+/**
+ * l'impacte de l'objet ConsoCarbone en TCO2eq
+ */
 protected double impact;
 
 

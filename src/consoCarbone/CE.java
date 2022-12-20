@@ -3,7 +3,7 @@ package consoCarbone;
 /**
  * CE objects are the different types of energy consumption classes of accommodations
  * @author Anfel MAZOUZ
- *
+ *@version 1.0
  */
 
 

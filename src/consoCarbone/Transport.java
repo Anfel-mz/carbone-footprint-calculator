@@ -4,6 +4,7 @@ import java.lang.Math;
 /**
  * a Transport object is a ConsoCarbone representing the carbon footprint of our vehicle
  * @author Anfel MAZOUZ
+ * @version 1.0
  *
  */
 
