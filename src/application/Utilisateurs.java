@@ -2,7 +2,7 @@ package application;
 
 import consoCarbone.*;
 
-public class Utilsateurs {
+public class Utilisateurs {
 
 private Alimentation alimentation;
 private Logement logement ;
