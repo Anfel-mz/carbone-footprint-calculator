@@ -1,6 +1,11 @@
 package application;
 
 import consoCarbone.*;
+/** A Utilisateurs object represents the user of the calculator
+ * 
+ * @author anfel MAZOUZ
+ *
+ */
 
 public class Utilisateurs {
 
@@ -10,10 +15,18 @@ private BienConso bienConso;
 private Transport transport; 
 private ServicesPublics services;
 
+/**
+ * CalculatXXXXXe the Carbon footprint of a user
+ * @return the value of the impact a user has in TCO2eq
+ */
+
 public double calculerEmpreinte() {
 	return this.alimentation.getImpact() + this.logement.getImpact() + this.bienConso.getImpact() + this.transport.getImpact() + this.services.getImpact();
 }
 
+/**
+ * shows the detailed result of the carbon footprint of a user to the console
+ */
 public void detaillerEmpreinte() {
 	System.out.println("Votre Empreinte Carbonne est de "+this.calculerEmpreinte()+" TCO2eq \n");
 	System.out.println("impacte d'alimentation: "+ this.alimentation.getImpact() +" TCO2eq");
