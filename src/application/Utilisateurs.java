@@ -71,10 +71,10 @@ public Utilisateurs (String file) {
 
 /**
  * constructeur d'un utilisateur avec tous les données 
- * @param alimentation
- * @param bienConso
- * @param logement
- * @param transport
+ * @param alimentation objet alimentation de l'utilisateur
+ * @param bienConso objet BienConso représente la consomation du bien de l'utilisateur
+ * @param logement objet Logement represente le logement de l'utilisateur
+ * @param transport objet Tranport represente le vehicule de l'utilisateur
  */
 public Utilisateurs (Alimentation alimentation, BienConso bienConso, Logement logement, Transport transport) {
 	this.alimentation = alimentation;
@@ -131,6 +131,7 @@ public double calculerImpactTransport(Collection<Transport> collection) {
 
 /**
  * shows the detailed result of the carbon footprint of a user to the console
+ * @return un String contenant le détaille de l'empreinte carbone de l'utilisateur
  */
 public String detaillerEmpreinte() {
 	String detaille = "Votre Empreinte Carbonne est de "+this.empreinte+" TCO2eq \n"+ "\n"+ "impacte d'alimentation: "+ this.alimentation.getImpact()+" TCO2eq"
@@ -244,7 +245,7 @@ public void setBienConso(BienConso bienConso) {
 }
 /**
  * 
- * @returnla liste des véhicules de l'utilisateur
+ * @return la liste des véhicules de l'utilisateur
  */
 public TreeMap<Integer, Transport> getTransport() {
 	return transport;
