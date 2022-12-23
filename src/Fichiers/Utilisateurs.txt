@@ -1,0 +1,6 @@
+Alimentation-0.7-0.2
+BienConso-200
+Logement-45-B
+Transport-P-90000-900
+
+ 

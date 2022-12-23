@@ -35,9 +35,12 @@ public class Alimentation extends ConsoCarbone {
 	 */
     public Alimentation(double txBoeuf, double txVege){
         super();
-    	this.txBoeuf=txBoeuf;
+        if(txBoeuf<0 || txBoeuf>1 || txVege>1 || txVege <0 ) 
+        	throw new IllegalArgumentException("txBoeuf and txVege values should be between 0 and 1");
+        this.txBoeuf=txBoeuf;
         this.txVege=txVege;
         this.impact= this.setImpact();
+        
     }
     
    
@@ -63,11 +66,16 @@ public class Alimentation extends ConsoCarbone {
 	}
 
     /**
-     * 
+     * modifie le txBoeuf et update le impact
      * @param txBoeuf must be a value between 0 and 1
      */
 	public void setTxBoeuf(double txBoeuf) {
+		if(txBoeuf<0||txBoeuf>1) 
+        	throw new IllegalArgumentException("txBoeuf should be between 0 and 1");
+		
 		this.txBoeuf = txBoeuf;
+		this.impact = this.setImpact();
+		
 	}
     
 	/**
@@ -79,11 +87,17 @@ public class Alimentation extends ConsoCarbone {
 
 
 	/**
-	 * 
+	 * modifie le txVege et update le impact
 	 * @param txVege must be a value between 0 and 1
 	 */
 	public void setTxVege(double txVege) {
+		if(txVege<0||txVege>1) 
+        	throw new IllegalArgumentException("txVege should be between 0 and 1");
+	
 		this.txVege = txVege;
+		this.impact = this.setImpact();
+		
+
 	}
 
 	

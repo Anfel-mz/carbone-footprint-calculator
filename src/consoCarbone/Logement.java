@@ -17,9 +17,11 @@ public class Logement extends ConsoCarbone{
 	 */
 	public Logement() {
 		super();
+
 		this.superficie = 0;
 		this.ce = null;
-		this.impact = this.setImpact();
+		this.impact = 0;
+		
 	}
 	
 	/**
@@ -31,6 +33,8 @@ public class Logement extends ConsoCarbone{
     
     public Logement(int superficie, CE ce) {
     	super();
+    	if(superficie <0) 
+        	throw new IllegalArgumentException("valeurs invalide superficie supérieure à 0");
     	this.superficie = superficie;
     	this.ce = ce;
     	this.impact = this.setImpact();
@@ -56,15 +60,18 @@ public class Logement extends ConsoCarbone{
      * @return la surface d'un logement en m2
      */
     public int getSuperficie() {
-		return superficie;
+		return this.superficie;
 	}
 
     /**
-     * 
+     * modifie la superficie et update l'impacte
      * @param superficie la superficie d'un logement en m2
      */
 	public void setSuperficie(int superficie) {
+		if(superficie <0) 
+        	throw new IllegalArgumentException("valeurs invalide superficie supérieure à 0");
 		this.superficie = superficie;
+		this.impact = (this.ce != null)? this.setImpact() : 0;
 	}
 
 	/**
@@ -76,11 +83,12 @@ public class Logement extends ConsoCarbone{
 	}
 
 	/**
-	 * 
+	 * modifie le CE et ipdate l'impacte
 	 * @param ce la classe énergétique d'un logement 
 	 */
 	public void setCe(CE ce) {
 		this.ce = ce;
+		this.impact = this.setImpact();
 	}
 
 

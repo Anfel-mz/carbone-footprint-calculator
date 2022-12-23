@@ -38,5 +38,11 @@ protected double setImpact() {
 }
 
 
+@Override
+public String toString() {
+	return "ServicesPublics id:" + this.getId() + "\n"+"Impact: "+ this.getImpact()+"\n"+"----------------------------";
+}
+
+
 
 }
